@@ -14,12 +14,7 @@ import imghdr
 
 model = keras.models.load_model('./model.h5')
 print("Welcome to .....\n")
-print("""\
-█▀▀ █▀█ █░█ █▀█ ▀█▀ █░█ █▄░█ █▀▀   █▀▄▀█ █░░   █▀▀ ▀█▀ █▀▀   █▀▀ █░█ ▄▀█ █░░ █░░ █▀▀ █▄░█ █▀▀ █▀▀
-█▀░ █▄█ █▄█ █▀▄ ░█░ █▄█ █░▀█ ██▄   █░▀░█ █▄▄   █▄▄ ░█░ █▀░   █▄▄ █▀█ █▀█ █▄▄ █▄▄ ██▄ █░▀█ █▄█ ██▄
- """)
-print("Created by: Alex Neelankavil Devassy")
-print("Access http://127.0.0.1 in host systems's browser")
+print("Access http://127.0.0.1:8080 in host systems's browser")
 print("Press Ctrl+C to quit")
 with open("templates/AICorp.html","rb") as file:
     STATIC_HTML_PAGE = file.read()
@@ -73,7 +68,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         if shownDigit == 4:
-            response = '{ "text": " Welcome Mr. ' + str(shownDigit) +'tune {++BackPropogation Magic++}"}'
+            response = '{ "text": "cyber{ML_is_not_that_strong}"}'
         else:
             response = '{ "text": "Access Denied"}'
         sys.stdout.flush()
